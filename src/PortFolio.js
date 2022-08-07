@@ -29,18 +29,39 @@ const Subtitle = styled.div`
   font-weight: 500;
   color: #87805e;
 `;
-const Section2 = styled.div`
+const SectionWrap = styled.div`
   width: 100%;
   height: 100vh;
+  display: flex;
+  overflow: hidden;
+`;
+const Section = styled.div`
+  width: 200%;
+  height: 100vh;
+`;
+const Section2 = styled.div`
+  width: 100%;
+  height: 100%;
   position: relative;
   z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 const PFTitle = styled.div`
   font-size: 100px;
   font-weight: 900;
   color: #b09b71;
+  position: absolute;
+  top: 20px;
+  left: 50px;
 `;
-const PFImg = styled.div``;
+const PFImg = styled.div`
+  width: 70%;
+  height: 50%;
+  border: 1px solid white;
+`;
 const TextWrap = styled.div``;
 
 export const PortFolio = () => {
@@ -51,16 +72,20 @@ export const PortFolio = () => {
         <Title>JeongHyeon</Title>
         <Subtitle>PortFolio</Subtitle>
       </Section1>
-      <Section2>
-        <PFTitle>Movie App</PFTitle>
-        <PFImg />
-        <TextWrap></TextWrap>
-      </Section2>
-      <Section2>
-        <PFTitle>Seoul Plant</PFTitle>
-        <PFImg />
-        <TextWrap></TextWrap>
-      </Section2>
+      <SectionWrap>
+        <Section>
+          <Section2>
+            <PFTitle>Movie App</PFTitle>
+            <PFImg />
+            <TextWrap></TextWrap>
+          </Section2>
+          <Section2>
+            <PFTitle>Seoul Plant</PFTitle>
+            <PFImg />
+            <TextWrap></TextWrap>
+          </Section2>
+        </Section>
+      </SectionWrap>
     </>
   );
 };

@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import { Publishing } from "./DataDB";
+import { Slide } from "./Slide";
 import { mainStyle } from "./style/Globalstyle";
 
 const Wrap = styled.div`
   width: 100%;
-  height: 100vh;
-  position: sticky;
-  top: 0;
   background-color: ${mainStyle.BgColor};
 `;
 const Section1 = styled.div`
@@ -17,9 +15,6 @@ const Section1 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  z-index: 99;
   svg {
     fill: none;
     width: 30%;
@@ -39,44 +34,22 @@ const Section1 = styled.div`
   }
 `;
 
-const SectionWrap = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
-`;
+const SectionWrap = styled.div``;
 const Section = styled.div`
-  width: 200%;
-  height: 100vh;
-`;
-const Section2 = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 99;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  padding: ${mainStyle.padding};
 `;
-const PFTitle = styled.div`
-  font-size: 100px;
-  font-weight: 900;
-  color: #b09b71;
-  position: absolute;
-  top: 20px;
-  left: 50px;
+const Theme = styled.div`
+  width: 100%;
+  height: 20vh;
+  font-size: 50px;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  color: ${mainStyle.boldColor};
 `;
-const PFImg = styled.div`
-  width: 70%;
-  height: 50%;
-  border: 1px solid white;
-`;
-const TextWrap = styled.div``;
-const Theme = styled.div``;
-const PjText = styled.div``;
-const STitle = styled.div``;
-const SText = styled.div``;
 
 export const PortFolio = () => {
   useEffect(() => {
@@ -93,8 +66,7 @@ export const PortFolio = () => {
     logosvg();
   }, []);
   return (
-    <>
-      <Wrap />
+    <Wrap>
       <Section1>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444.48 298.86">
           <defs>
@@ -212,35 +184,9 @@ export const PortFolio = () => {
       <SectionWrap>
         <Section>
           <Theme>Publishing</Theme>
-          {Publishing.map((con) => (
-            <Section2>
-              <PFTitle>
-                <span>{con.project}</span>
-                {con.title}
-              </PFTitle>
-              <PFImg />
-              <TextWrap>
-                <PjText>
-                  <STitle>프로젝트 기간</STitle>
-                  <SText>{con.date}</SText>
-                </PjText>
-                <PjText>
-                  <STitle>사용프로그램</STitle>
-                  <SText>{con.program}</SText>
-                </PjText>
-                <PjText>
-                  <STitle>사용언어</STitle>
-                  <SText>{con.languages}</SText>
-                </PjText>
-                <PjText>
-                  <STitle>Git주소</STitle>
-                  <SText>{con.post}</SText>
-                </PjText>
-              </TextWrap>
-            </Section2>
-          ))}
+          <Slide con={Publishing} />
         </Section>
       </SectionWrap>
-    </>
+    </Wrap>
   );
 };

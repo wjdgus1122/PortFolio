@@ -8,6 +8,15 @@ export const Publishing = [
     languages: "JavaScript / CSS / HTML5",
     post: "https://hij00.github.io/seoul_garden_renewal/ ",
   },
+  {
+    id: 1,
+    title: "서울식물원",
+    project: "Team Project",
+    date: "2022 5.3 ~ 2022 6.13",
+    program: "Visual Studio Code",
+    languages: "JavaScript / CSS / HTML5",
+    post: "https://hij00.github.io/seoul_garden_renewal/ ",
+  },
 ];
 
 export const ReactProject = [

@@ -6,11 +6,15 @@ export const mainStyle = {
   logoColor: "#14274E",
   boldColor: "#394867",
   fontColor: "#9BA4B4",
+  padding: "0 50px",
 };
 
 export const Globalstyle = createGlobalStyle`
     ${reset}
-    body{
+    *{
         box-sizing: border-box;
+    }
+    body{
+        overflow-x: hidden;
     }
 `;

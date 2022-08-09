@@ -7,6 +7,7 @@ import { mainStyle } from "./style/Globalstyle";
 const Wrap = styled.div`
   width: 100%;
   background-color: ${mainStyle.BgColor};
+  padding: ${mainStyle.padding};
 `;
 const Section1 = styled.div`
   width: 100%;
@@ -34,13 +35,6 @@ const Section1 = styled.div`
   }
 `;
 
-const SectionWrap = styled.div``;
-const Section = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: ${mainStyle.padding};
-`;
 const Theme = styled.div`
   width: 100%;
   height: 20vh;
@@ -181,12 +175,8 @@ export const PortFolio = () => {
           </g>
         </svg>
       </Section1>
-      <SectionWrap>
-        <Section>
-          <Theme>Publishing</Theme>
-          <Slide con={Publishing} />
-        </Section>
-      </SectionWrap>
+      <Theme>Publishing</Theme>
+      <Slide con={Publishing} />
     </Wrap>
   );
 };

@@ -15,6 +15,5 @@ export const Globalstyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body{
-        overflow-x: hidden;
     }
 `;

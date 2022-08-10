@@ -1,12 +1,16 @@
 import { mainStyle } from "./style/Globalstyle";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/mousewheel";
+import "swiper/css/pagination";
 
 const SlideWrap = styled.div`
   width: 100%;
   height: 80vh;
   position: relative;
+  padding: ${mainStyle.padding};
 `;
 
 const Title = styled.div`
@@ -31,7 +35,7 @@ const Img = styled.div`
   border: 1px solid black;
   position: absolute;
   top: 0;
-  right: 0;
+  right: ${mainStyle.leftpadding};
 `;
 const TextWrap = styled.div``;
 const PjText = styled.div`
@@ -45,10 +49,20 @@ const STitle = styled.div`
 const SText = styled.div`
   color: ${mainStyle.fontColor};
 `;
+
 export const Slide = ({ con }) => {
   return (
     <>
-      <Swiper>
+      <Swiper
+        modules={[Mousewheel, Pagination]}
+        slidesPerView={1}
+        spaceBetween={30}
+        mousewheel={true}
+        pagination={{ clickable: true }}
+        onReachEnd={() => {
+          window.scrollBy({ top: 50 });
+        }}
+      >
         {con.map((con) => (
           <SwiperSlide>
             <SlideWrap>

@@ -7,7 +7,6 @@ import { mainStyle } from "./style/Globalstyle";
 const Wrap = styled.div`
   width: 100%;
   background-color: ${mainStyle.BgColor};
-  padding: ${mainStyle.padding};
 `;
 const Section1 = styled.div`
   width: 100%;
@@ -43,6 +42,7 @@ const Theme = styled.div`
   display: flex;
   align-items: flex-end;
   color: ${mainStyle.boldColor};
+  padding-left: ${mainStyle.leftpadding};
 `;
 
 export const PortFolio = () => {
@@ -59,6 +59,7 @@ export const PortFolio = () => {
     };
     logosvg();
   }, []);
+
   return (
     <Wrap>
       <Section1>
@@ -177,6 +178,7 @@ export const PortFolio = () => {
       </Section1>
       <Theme>Publishing</Theme>
       <Slide con={Publishing} />
+      <Theme>React Web Project</Theme>
     </Wrap>
   );
 };

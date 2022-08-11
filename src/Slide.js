@@ -10,17 +10,14 @@ const SlideWrap = styled.div`
   width: 100%;
   height: 80vh;
   position: relative;
-  padding: ${mainStyle.padding};
 `;
 
 const Title = styled.div`
-  width: 350px;
   font-weight: 900;
   color: ${mainStyle.boldColor};
-  padding-top: 130px;
+  padding-top: 65px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 `;
 const Team = styled.div`
   font-size: 25px;
@@ -29,13 +26,12 @@ const TitleText = styled.div`
   font-size: 70px;
   padding-top: 5px;
 `;
-const Img = styled.div`
+const Img = styled.img`
   width: 1160px;
-  height: 730px;
-  border: 1px solid black;
+  height: 680px;
   position: absolute;
   top: 0;
-  right: ${mainStyle.leftpadding};
+  right: 0;
 `;
 const TextWrap = styled.div``;
 const PjText = styled.div`
@@ -46,7 +42,7 @@ const STitle = styled.div`
   color: ${mainStyle.boldColor};
   margin-bottom: 5px;
 `;
-const SText = styled.div`
+const SText = styled.a`
   color: ${mainStyle.fontColor};
 `;
 
@@ -59,9 +55,6 @@ export const Slide = ({ con }) => {
         spaceBetween={30}
         mousewheel={true}
         pagination={{ clickable: true }}
-        onReachEnd={() => {
-          window.scrollBy({ top: 50 });
-        }}
       >
         {con.map((con) => (
           <SwiperSlide>
@@ -70,7 +63,7 @@ export const Slide = ({ con }) => {
                 <Team>{con.project}</Team>
                 <TitleText>{con.title}</TitleText>
               </Title>
-              <Img />
+              <Img src={con.img} />
               <TextWrap>
                 <PjText>
                   <STitle>프로젝트 기간</STitle>
@@ -84,10 +77,22 @@ export const Slide = ({ con }) => {
                   <STitle>사용언어</STitle>
                   <SText>{con.languages}</SText>
                 </PjText>
-                <PjText>
-                  <STitle>Git주소</STitle>
-                  <SText>{con.post}</SText>
-                </PjText>
+                {con.post && (
+                  <PjText>
+                    <STitle>배포주소</STitle>
+                    <SText target="_blank" href={`${con.post}`}>
+                      {con.post}
+                    </SText>
+                  </PjText>
+                )}
+                {con.git && (
+                  <PjText>
+                    <STitle>Git주소</STitle>
+                    <SText target="_blank" href={`${con.git}`}>
+                      {con.git}
+                    </SText>
+                  </PjText>
+                )}
               </TextWrap>
             </SlideWrap>
           </SwiperSlide>

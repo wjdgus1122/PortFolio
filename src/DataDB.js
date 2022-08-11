@@ -1,3 +1,8 @@
+import pub_1 from "./img/publishing/seoul.png";
+import dyson from "./img/react/dyson.png";
+import movie from "./img/react/Movie.png";
+import login from "./img/toy/Login.png";
+
 export const Publishing = [
   {
     id: 0,
@@ -7,15 +12,8 @@ export const Publishing = [
     program: "Visual Studio Code",
     languages: "JavaScript / CSS / HTML5",
     post: "https://hij00.github.io/seoul_garden_renewal/ ",
-  },
-  {
-    id: 1,
-    title: "서울식물원",
-    project: "Team Project",
-    date: "2022 5.3 ~ 2022 6.13",
-    program: "Visual Studio Code",
-    languages: "JavaScript / CSS / HTML5",
-    post: "https://hij00.github.io/seoul_garden_renewal/ ",
+    git: "https://github.com/wjdgus1122/SeoulGarden",
+    img: `${pub_1}`,
   },
 ];
 
@@ -28,6 +26,8 @@ export const ReactProject = [
     program: "Visual Studio Code",
     languages: "JavaScript / CSS / HTML5",
     post: "https://wjdgus1122.github.io/movie_project",
+    git: "https://github.com/wjdgus1122/movie_project",
+    img: `${movie}`,
   },
   // {
   //     id : 1,
@@ -48,6 +48,8 @@ export const ToyProject = [
     date: "2022 7.19 ~ 2022 7.22",
     program: "Visual Studio Code",
     languages: "JavaScript / CSS / HTML5",
-    post: "",
+    post: "https://wjdgus1122.github.io/Login_project/#/login",
+    git: "https://github.com/wjdgus1122/Login_project",
+    img: `${login}`,
   },
 ];

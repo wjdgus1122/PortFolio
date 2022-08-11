@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { Publishing } from "./DataDB";
+import { Publishing, ReactProject, ToyProject } from "./DataDB";
 import { Slide } from "./Slide";
 import { mainStyle } from "./style/Globalstyle";
 
 const Wrap = styled.div`
   width: 100%;
   background-color: ${mainStyle.BgColor};
+  padding: ${mainStyle.padding};
 `;
 const Section1 = styled.div`
   width: 100%;
@@ -42,7 +43,6 @@ const Theme = styled.div`
   display: flex;
   align-items: flex-end;
   color: ${mainStyle.boldColor};
-  padding-left: ${mainStyle.leftpadding};
 `;
 
 export const PortFolio = () => {
@@ -178,7 +178,10 @@ export const PortFolio = () => {
       </Section1>
       <Theme>Publishing</Theme>
       <Slide con={Publishing} />
-      <Theme>React Web Project</Theme>
+      <Theme>React Project</Theme>
+      <Slide con={ReactProject} />
+      <Theme>Toy Project</Theme>
+      <Slide con={ToyProject} />
     </Wrap>
   );
 };

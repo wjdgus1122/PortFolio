@@ -2,9 +2,12 @@ import { mainStyle } from "./style/Globalstyle";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/pagination";
+import { useEffect } from "react";
 
 const SlideWrap = styled.div`
   width: 100%;
@@ -47,6 +50,12 @@ const SText = styled.a`
 `;
 
 export const Slide = ({ con }) => {
+  useEffect(() => {
+    const swipersection = () => {
+      AOS.init();
+    };
+    swipersection();
+  }, []);
   return (
     <>
       <Swiper
@@ -59,26 +68,26 @@ export const Slide = ({ con }) => {
         {con.map((con) => (
           <SwiperSlide>
             <SlideWrap>
-              <Title>
+              <Title data-aos="fade-up">
                 <Team>{con.project}</Team>
                 <TitleText>{con.title}</TitleText>
               </Title>
-              <Img src={con.img} />
+              <Img src={con.img} data-aos="fade-left" />
               <TextWrap>
-                <PjText>
+                <PjText data-aos="fade-right" data-aos-delay="200">
                   <STitle>프로젝트 기간</STitle>
                   <SText>{con.date}</SText>
                 </PjText>
-                <PjText>
+                <PjText data-aos="fade-right" data-aos-delay="250">
                   <STitle>사용프로그램</STitle>
                   <SText>{con.program}</SText>
                 </PjText>
-                <PjText>
+                <PjText data-aos="fade-right" data-aos-delay="300">
                   <STitle>사용언어</STitle>
                   <SText>{con.languages}</SText>
                 </PjText>
                 {con.post && (
-                  <PjText>
+                  <PjText data-aos="fade-right" data-aos-delay="350">
                     <STitle>배포주소</STitle>
                     <SText target="_blank" href={`${con.post}`}>
                       {con.post}
@@ -86,7 +95,7 @@ export const Slide = ({ con }) => {
                   </PjText>
                 )}
                 {con.git && (
-                  <PjText>
+                  <PjText data-aos="fade-right" data-aos-delay="400">
                     <STitle>Git주소</STitle>
                     <SText target="_blank" href={`${con.git}`}>
                       {con.git}

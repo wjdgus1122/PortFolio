@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Publishing, ReactProject, ToyProject } from "./DataDB";
 import { Slide } from "./Slide";
 import { mainStyle } from "./style/Globalstyle";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Wrap = styled.div`
   width: 100%;
@@ -56,6 +58,7 @@ export const PortFolio = () => {
         path.style.setProperty("--delay", index * 50 + "ms");
         path.style.setProperty("--duration", length * 1 + "ms");
       });
+      AOS.init();
     };
     logosvg();
   }, []);
@@ -176,11 +179,11 @@ export const PortFolio = () => {
           </g>
         </svg>
       </Section1>
-      <Theme>Publishing</Theme>
+      <Theme data-aos="fade-up">Publishing</Theme>
       <Slide con={Publishing} />
-      <Theme>React Project</Theme>
+      <Theme data-aos="fade-up">React Project</Theme>
       <Slide con={ReactProject} />
-      <Theme>Toy Project</Theme>
+      <Theme data-aos="fade-up">Toy Project</Theme>
       <Slide con={ToyProject} />
     </Wrap>
   );

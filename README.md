@@ -6,12 +6,8 @@
 
 ## 사이트 설명
 
-</div>
-
 - [x] 제가 만든 포트폴리오를 종합해놓은 사이트 입니다.
 - [x] 각 포트폴리오의 배포주소, git주소를 통해 포트폴리오를 감상하세요.
-
-<div align="center">
 
 ### :computer: 사용한 기술 :computer:
 
@@ -25,19 +21,19 @@
 
 </div>
 
-## Theme
+## :mega: Theme
 
 ### Publishing
 
-- css와 Html을 주로 사용하여 웹사이트를 리뉴얼 한 포트폴리오
+:bell: css와 Html을 주로 사용하여 웹사이트를 리뉴얼 한 포트폴리오
 
 ### React Project
 
-- React환경을 기반으로 만든 다양한 웹 포트폴리오
+:bell: React환경을 기반으로 만든 다양한 웹 포트폴리오
 
 ### Toy Project
 
-- React환경을 기반으로 만든 간단한 기능을 구현한 프트폴리오
+:bell: React환경을 기반으로 만든 간단한 기능을 구현한 프트폴리오
 
 ## Header
 

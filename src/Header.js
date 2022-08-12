@@ -16,6 +16,7 @@ const Wrap = styled.div`
 const Logo = styled.div`
   font-size: 30px;
   font-weight: 900;
+  cursor: pointer;
   color: ${(props) => props.color};
 `;
 const MenuWrap = styled.div`
@@ -77,13 +78,20 @@ export const Header = () => {
   window.addEventListener("scroll", headerhandle);
   return (
     <Wrap>
-      <Logo color={logocl}>JH PORTFOLIO</Logo>
+      <Logo
+        color={logocl}
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        JH PORTFOLIO
+      </Logo>
       <MenuWrap>
         <Menu
           color1={menu_1}
           className="menu1"
           onClick={() => {
-            window.scrollTo({ top: 960, behavior: "smooth" });
+            window.scrollTo({ top: 980, behavior: "smooth" });
           }}
         >
           Publishing
@@ -92,7 +100,7 @@ export const Header = () => {
           color2={menu_2}
           className="menu2"
           onClick={() => {
-            window.scrollTo({ top: 1900, behavior: "smooth" });
+            window.scrollTo({ top: 1920, behavior: "smooth" });
           }}
         >
           React Project
@@ -101,7 +109,7 @@ export const Header = () => {
           color3={menu_3}
           className="menu3"
           onClick={() => {
-            window.scrollTo({ top: 2790, behavior: "smooth" });
+            window.scrollTo({ top: 2870, behavior: "smooth" });
           }}
         >
           Toy Project

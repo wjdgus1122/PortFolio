@@ -13,6 +13,7 @@ const SlideWrap = styled.div`
   width: 100%;
   height: 80vh;
   position: relative;
+  margin-bottom: 20px;
 `;
 
 const Title = styled.div`

@@ -30,12 +30,45 @@ const TitleText = styled.div`
   font-size: 70px;
   padding-top: 5px;
 `;
-const Img = styled.img`
+const ImgWrap = styled.div`
   width: 1160px;
   height: 680px;
   position: absolute;
   top: 0;
   right: 0;
+  &:hover {
+    .box {
+      display: flex;
+    }
+  }
+`;
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+const Box = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+const Btn = styled.a`
+  width: 180px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 30px;
+  position: relative;
+  z-index: 99;
 `;
 const TextWrap = styled.div``;
 const PjText = styled.div`
@@ -73,7 +106,21 @@ export const Slide = ({ con }) => {
                 <Team>{con.project}</Team>
                 <TitleText>{con.title}</TitleText>
               </Title>
-              <Img src={con.img} data-aos="fade-left" />
+              <ImgWrap data-aos="fade-left">
+                <Img src={con.img} />
+                <Box className="box">
+                  {con.post && (
+                    <Btn target="_blank" href={`${con.post}`}>
+                      배포사이트
+                    </Btn>
+                  )}
+                  {con.git && (
+                    <Btn target="_blank" href={`${con.git}`}>
+                      Git페이지
+                    </Btn>
+                  )}
+                </Box>
+              </ImgWrap>
               <TextWrap>
                 <PjText data-aos="fade-right" data-aos-delay="200">
                   <STitle>프로젝트 기간</STitle>

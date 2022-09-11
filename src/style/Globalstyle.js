@@ -1,23 +1,26 @@
 import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
 
 export const mainStyle = {
-  BgColor: "#F1F6F9",
-  logoColor: "#14274E",
-  boldColor: "#394867",
-  fontColor: "#9BA4B4",
-  padding: "0 50px",
-  leftpadding: "50px",
+  mainColor: "#493323",
+  navyColor: "#91684A",
+  blueColor: "#EAAC7F",
+  bagieColor: "#FFDF91",
+  grayColor: "#707070",
+  gitColor: "#6000AA",
+  hoverColor: "#FFC996",
 };
 
 export const Globalstyle = createGlobalStyle`
-    ${reset}
     *{
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
-        a{
-          text-decoration: none;
-        }
+        word-break: keep-all;
     }
-    body{
+    a{
+      text-decoration: none;
+    }
+    li{
+      list-style: none;
     }
 `;

@@ -6,6 +6,7 @@ import html from "./img/skill/html.png";
 import css from "./img/skill/css.png";
 import js from "./img/skill/js.png";
 import react from "./img/skill/react.png";
+import todo from "./img/toy/Todolist.png";
 
 export const SkillDB = [
   {
@@ -72,5 +73,14 @@ export const ToyDB = [
     project: "Solo Project",
     pjpost: "https://wjdgus1122.github.io/Login_project/#/login",
     gitpost: "https://github.com/wjdgus1122/Login_project",
+  },
+  {
+    id: 1,
+    pjnumber: "02",
+    img: `${todo}`,
+    name: "To_Do_List",
+    project: "Solo Project",
+    pjpost: "https://wjdgus1122.github.io/ToDoList/",
+    gitpost: "https://github.com/wjdgus1122/ToDoList",
   },
 ];

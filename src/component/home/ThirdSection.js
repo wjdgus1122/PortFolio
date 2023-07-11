@@ -17,7 +17,7 @@ const Section = styled.div`
   position: relative;
   overflow: hidden;
   @media screen and (max-width: 500px) {
-    height: 70vh;
+    height: 100vh;
   }
 `;
 const TitleWrap = styled.div`
@@ -31,6 +31,9 @@ const TitleWrap = styled.div`
     padding: 0 20px;
     position: relative;
   }
+  @media screen and (max-width: 400px) {
+    align-items: center;
+  }
 `;
 const TdNumber = styled.div`
   font-size: 315px;
@@ -39,6 +42,10 @@ const TdNumber = styled.div`
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   @media screen and (max-width: 500px) {
     font-size: 100px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 50px;
   }
 `;
 const TdTextWrap = styled.div`
@@ -60,6 +67,13 @@ const TdTextWrap = styled.div`
       padding-top: 65px;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    padding-top: 0;
+    &.sctextwrap {
+      padding-top: 0;
+    }
+  }
 `;
 const TdTitle = styled.div`
   font-size: 60px;
@@ -70,6 +84,9 @@ const TdTitle = styled.div`
   }
   @media screen and (max-width: 500px) {
     font-size: 40px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 30px;
   }
 `;
 const TdText = styled.div`
@@ -96,6 +113,9 @@ const MoTdText = styled.div`
     position: absolute;
     left: 20px;
     bottom: 0;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 18px;
   }
 `;
 const TdTsTextWrap = styled.div`

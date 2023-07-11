@@ -49,6 +49,12 @@ const MainLogo = styled.div`
       width: 400px;
     }
   }
+  @media screen and (max-width: 400px) {
+    & svg {
+      fill: none;
+      width: 300px;
+    }
+  }
 `;
 const Transtext1 = styled.div`
   width: 50%;
@@ -80,6 +86,9 @@ const TsText = styled.p`
   color: ${(props) => props.ftcolor};
   @media screen and (max-width: 500px) {
     font-size: 30px;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 20px;
   }
 `;
 const ScrollIcon = styled.div`

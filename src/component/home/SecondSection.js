@@ -75,6 +75,9 @@ const SkillImg = styled.img`
   @media screen and (max-width: 500px) {
     height: 70px;
   }
+  @media screen and (max-width: 400px) {
+    width: 80%;
+  }
 `;
 const SkillText = styled.div`
   display: flex;
@@ -86,6 +89,9 @@ const SkillTitle = styled.div`
   font-weight: 900;
   @media screen and (max-width: 500px) {
     font-size: 20px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
   }
 `;
 const ExTextWrap = styled.div`
@@ -137,6 +143,9 @@ const LibTitle = styled.div`
       font-size: 18px;
     }
   }
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
 `;
 const PjTitleWrap = styled.div`
   width: 360px;
@@ -158,6 +167,9 @@ const PjTitle = styled.div`
   transition: 0.5s;
   @media screen and (max-width: 500px) {
     font-size: 40px;
+  }
+  @media screen and (max-width: 400px) {
+    display: none;
   }
 `;
 

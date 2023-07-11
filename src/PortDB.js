@@ -83,4 +83,22 @@ export const ToyDB = [
     pjpost: "https://wjdgus1122.github.io/ToDoList/",
     gitpost: "https://github.com/wjdgus1122/ToDoList",
   },
+  {
+    id: 2,
+    pjnumber: "03",
+    img: ``,
+    name: "Game",
+    project: "Solo Project",
+    pjpost: "https://wjdgus1122.github.io/shootingGame/",
+    gitpost: "https://github.com/wjdgus1122/shootingGame",
+  },
+  {
+    id: 3,
+    pjnumber: "04",
+    img: ``,
+    name: "Draw_Project",
+    project: "Solo Project",
+    pjpost: "",
+    gitpost: "",
+  },
 ];

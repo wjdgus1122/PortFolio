@@ -7,6 +7,7 @@ import css from "./img/skill/css.png";
 import js from "./img/skill/js.png";
 import react from "./img/skill/react.png";
 import todo from "./img/toy/Todolist.png";
+import game from "./img/toy/game.png";
 
 export const SkillDB = [
   {
@@ -86,19 +87,19 @@ export const ToyDB = [
   {
     id: 2,
     pjnumber: "03",
-    img: ``,
+    img: `${game}`,
     name: "Game",
     project: "Solo Project",
     pjpost: "https://wjdgus1122.github.io/shootingGame/",
     gitpost: "https://github.com/wjdgus1122/shootingGame",
   },
-  {
-    id: 3,
-    pjnumber: "04",
-    img: ``,
-    name: "Draw_Project",
-    project: "Solo Project",
-    pjpost: "",
-    gitpost: "",
-  },
+  // {
+  //   id: 3,
+  //   pjnumber: "04",
+  //   img: ``,
+  //   name: "Draw_Project",
+  //   project: "Solo Project",
+  //   pjpost: "",
+  //   gitpost: "",
+  // },
 ];

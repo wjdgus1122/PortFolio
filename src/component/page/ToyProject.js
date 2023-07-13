@@ -63,6 +63,11 @@ const SlideNum = styled.div`
     font-size: 100px;
     padding-top: 6px;
   }
+
+  @media screen and (max-width: 400px) {
+    font-size: 50px;
+    padding-top: 6px;
+  }
 `;
 // const MoSlideTitle = styled.div`
 //   font-size: 20px;
@@ -99,6 +104,14 @@ const TextWrap = styled.div`
     left: 0;
     bottom: 80px;
   }
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 260px;
+  }
 `;
 const BtnWrap = styled.div`
   width: 100%;
@@ -133,6 +146,11 @@ const PostBtn = styled.div`
       display: none;
     }
   }
+  @media screen and (max-width: 400px) {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
 `;
 const GitBtn = styled.div`
   width: 150px;
@@ -153,6 +171,12 @@ const GitBtn = styled.div`
     background-color: ${mainStyle.gitColor};
     color: white;
   }
+
+  @media screen and (max-width: 400px) {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
 `;
 const SlideImg = styled.img`
   width: 745px;
@@ -164,6 +188,11 @@ const SlideImg = styled.img`
     top: 40%;
     left: 50%;
     transform: translateX(-50%) translateY(-40%);
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 200px;
+    top: 25%;
   }
 `;
 const TsTextWrap = styled.div`

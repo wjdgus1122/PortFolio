@@ -7,7 +7,7 @@ import css from "./img/skill/css.png";
 import js from "./img/skill/js.png";
 import react from "./img/skill/react.png";
 import todo from "./img/toy/Todolist.png";
-import game from "./img/toy/game.png";
+import game from "./img/toy/game.PNG";
 
 export const SkillDB = [
   {

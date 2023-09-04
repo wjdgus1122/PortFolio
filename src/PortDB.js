@@ -5,6 +5,7 @@ import login from "./img/toy/Login.png";
 import html from "./img/skill/html.png";
 import css from "./img/skill/css.png";
 import js from "./img/skill/js.png";
+import node from "./img/skill/node.png";
 import react from "./img/skill/react.png";
 import todo from "./img/toy/Todolist.png";
 import game from "./img/toy/game.PNG";
@@ -29,6 +30,11 @@ export const SkillDB = [
     id: 3,
     img: `${react}`,
     name: "React",
+  },
+  {
+    id: 4,
+    img: `${node}`,
+    name: "NodeJS",
   },
 ];
 

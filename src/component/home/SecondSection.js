@@ -11,7 +11,7 @@ const Section = styled.div`
   box-sizing: border-box;
   @media screen and (max-width: 500px) {
     padding: 0 20px;
-    height: 60vh;
+    height: auto;
   }
 `;
 const SkTitleWrap = styled.div`
@@ -44,7 +44,7 @@ const SkillCon = styled.div`
   position: relative;
   overflow: hidden;
   @media screen and (max-width: 500px) {
-    height: 120px;
+    height: auto;
     margin-top: 30px;
   }
 `;
@@ -59,6 +59,10 @@ const SkillWrap = styled.div`
   & .skill:last-child {
     margin-right: 0;
   }
+  @media screen and (max-width: 500px) {
+    flex-wrap: wrap;
+    position: relative;
+  }
 `;
 const Skill = styled.div`
   width: 200px;
@@ -67,6 +71,7 @@ const Skill = styled.div`
   @media screen and (max-width: 500px) {
     width: 70px;
     margin-right: 20px;
+    margin-top: 10px;
   }
 `;
 const SkillImg = styled.img`
@@ -76,7 +81,7 @@ const SkillImg = styled.img`
     height: 70px;
   }
   @media screen and (max-width: 400px) {
-    width: 80%;
+    width: 100%;
   }
 `;
 const SkillText = styled.div`
@@ -101,7 +106,7 @@ const ExTextWrap = styled.div`
   overflow: hidden;
   margin-top: 50px;
   @media screen and (max-width: 500px) {
-    height: 200px;
+    height: auto;
     margin-top: 20px;
   }
 `;
@@ -125,6 +130,7 @@ const ExText = styled.div`
     span {
       font-size: 18px;
     }
+    position: relative;
   }
 `;
 const LibTitle = styled.div`
@@ -168,9 +174,9 @@ const PjTitle = styled.div`
   @media screen and (max-width: 500px) {
     font-size: 40px;
   }
-  @media screen and (max-width: 400px) {
+  /* @media screen and (max-width: 400px) {
     display: none;
-  }
+  } */
 `;
 
 export const SecondSection = () => {

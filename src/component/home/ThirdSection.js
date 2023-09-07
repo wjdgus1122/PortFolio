@@ -5,6 +5,8 @@ import {
   faArrowRightLong,
   faArrowLeftLong,
 } from "@fortawesome/free-solid-svg-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import pubimg from "./../../img/publishing/seoul.png";
@@ -259,55 +261,15 @@ const TdConImg = styled.img`
 `;
 
 export const ThirdSection = ({ concolor }) => {
-  // useEffect(() => {
-  //   const mainset = () => {
-  //     const tdtsText1 = document.querySelector(".tdtstext1");
-  //     const tdtsText2 = document.querySelector(".tdtstext2");
-  //     const tdtsText3 = document.querySelector(".tdtstext3");
-  //     const Text1 = "Publishing ReactProject ToyProject".split(" ");
-
-  //     const tstexthandle = (element, textArr) => {
-  //       textArr.push(...textArr);
-  //       for (let i = 0; i < textArr.length; i++) {
-  //         element.innerText += `${textArr[i]}\u00A0\u00A0\u00A0\u00A0`;
-  //       }
-  //     };
-
-  //     tstexthandle(tdtsText1, Text1);
-  //     tstexthandle(tdtsText2, Text1);
-  //     tstexthandle(tdtsText3, Text1);
-
-  //     let count1 = 0;
-  //     let count2 = 0;
-  //     let count3 = 0;
-
-  //     const animateText = (count, element, direction) => {
-  //       if (count > element.scrollWidth / 2) {
-  //         element.style.transform = `translateX(0)`;
-  //         count = 0;
-  //       }
-  //       element.style.transform = `translateX(${count * direction}px)`;
-  //       return count;
-  //     };
-  //     const textanimate = () => {
-  //       count1++;
-  //       count2++;
-  //       count3++;
-
-  //       count1 = animateText(count1, tdtsText1, -1);
-  //       count2 = animateText(count2, tdtsText2, 1);
-  //       count3 = animateText(count3, tdtsText3, -1);
-
-  //       window.requestAnimationFrame(textanimate);
-  //     };
-  //     textanimate();
-  //   };
-  //   mainset();
-  // }, []);
+  AOS.init();
   return (
     <>
       <Section>
-        <TitleWrap>
+        <TitleWrap
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <TdNumber color={concolor}>01</TdNumber>
           <TdTextWrap>
             <TdTitle>Publishing</TdTitle>
@@ -315,10 +277,11 @@ export const ThirdSection = ({ concolor }) => {
           </TdTextWrap>
           <MoTdText>Html 과 Css만을 이용하여 만든 프로젝트</MoTdText>
         </TitleWrap>
-        {/* <TdTsTextWrap>
-          <TdTsText1 className="tdtstext1" color={concolor}></TdTsText1>
-        </TdTsTextWrap> */}
-        <TdConWrap>
+        <TdConWrap
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <Link to={"/publishing"}>
             <TdBtn color={concolor}>
               View <FontAwesomeIcon icon={faArrowRightLong} />{" "}
@@ -341,7 +304,12 @@ export const ThirdSection = ({ concolor }) => {
         </TdConWrap>
       </Section>
       <Section className="second">
-        <TitleWrap className="titlewrap">
+        <TitleWrap
+          className="titlewrap"
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <TdTextWrap className="sctextwrap">
             <TdTitle className="sctitle">React</TdTitle>
             <TdText className="sctext">
@@ -354,10 +322,12 @@ export const ThirdSection = ({ concolor }) => {
             React를 이용하여 HTML/Css Javascript를 이용하여 만든 프로젝트
           </MoTdText>
         </TitleWrap>
-        {/* <TdTsTextWrap className="tdtstextwrap">
-          <TdTsText1 className="tdtstext2" color={concolor}></TdTsText1>
-        </TdTsTextWrap> */}
-        <TdConWrap className="scconwrap">
+        <TdConWrap
+          className="scconwrap"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <TdCon color={concolor}>
             <TdTopCircle>
               <TopCircle
@@ -380,7 +350,11 @@ export const ThirdSection = ({ concolor }) => {
         </TdConWrap>
       </Section>
       <Section>
-        <TitleWrap>
+        <TitleWrap
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <TdNumber color={concolor}>03</TdNumber>
           <TdTextWrap>
             <TdTitle>Toy Project</TdTitle>
@@ -392,10 +366,11 @@ export const ThirdSection = ({ concolor }) => {
             React 및 여러가지 언어를 사용하여 만든 간단한 프로젝트
           </MoTdText>
         </TitleWrap>
-        {/* <TdTsTextWrap>
-          <TdTsText1 className="tdtstext3" color={concolor}></TdTsText1>
-        </TdTsTextWrap> */}
-        <TdConWrap>
+        <TdConWrap
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <Link to={"/toy"}>
             <TdBtn color={concolor}>
               View <FontAwesomeIcon icon={faArrowRightLong} />{" "}

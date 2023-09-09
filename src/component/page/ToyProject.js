@@ -69,18 +69,6 @@ const SlideNum = styled.div`
     padding-top: 6px;
   }
 `;
-// const MoSlideTitle = styled.div`
-//   font-size: 20px;
-//   font-weight: 900;
-//   color: white;
-//   display: none;
-//   @media screen and (max-width: 500px) {
-//     display: block;
-//     position: absolute;
-//     top: 50px;
-//     left: 130px;
-//   }
-// `;
 const SlideTextWrap = styled.div`
   display: flex;
   height: 100%;
@@ -249,7 +237,6 @@ export const ToyProject = ({ bgcolor }) => {
             <SwiperSlide>
               <SlideWrap>
                 <SlideNum color={bgcolor}>{con.pjnumber}</SlideNum>
-                {/* <MoSlideTitle>{con.name}</MoSlideTitle> */}
                 <SlideTextWrap>
                   <TextWrap>
                     {con.name}
@@ -287,7 +274,6 @@ export const ToyProject = ({ bgcolor }) => {
             <SwiperSlide>
               <SlideWrap>
                 <SlideNum color={bgcolor}>{con.pjnumber}</SlideNum>
-                {/* <MoSlideTitle>{con.name}</MoSlideTitle> */}
                 <SlideTextWrap>
                   <TextWrap>
                     {con.name}

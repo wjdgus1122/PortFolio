@@ -192,7 +192,7 @@ const TsTextWrap = styled.div`
 `;
 const TsText = styled.div`
   display: flex;
-  font-size: 110px;
+  font-size: 80px;
   font-weight: 900;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: ${(props) => props.color};

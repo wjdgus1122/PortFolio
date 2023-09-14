@@ -38,7 +38,7 @@ const TitleWrap = styled.div`
   }
 `;
 const TdNumber = styled.div`
-  font-size: 315px;
+  font-size: 200px;
   font-weight: 900;
   color: white;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;

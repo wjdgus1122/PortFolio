@@ -120,29 +120,7 @@ const MoTdText = styled.div`
     font-size: 18px;
   }
 `;
-const TdTsTextWrap = styled.div`
-  width: 100%;
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%) rotateZ(-22deg);
-  &.tdtstextwrap {
-    justify-content: flex-end;
-    transform: translateY(-50%) rotateZ(22deg);
-  }
-`;
-const TdTsText1 = styled.div`
-  display: flex;
-  padding: 3rem 0;
-  font-size: 110px;
-  font-weight: 900;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  color: ${(props) => props.color};
-  @media screen and (max-width: 500px) {
-    font-size: 60px;
-  }
-`;
+
 const TdConWrap = styled.div`
   display: flex;
   position: absolute;

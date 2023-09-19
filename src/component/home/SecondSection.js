@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { SkillDB } from "../../PortDB";
+import { FrontSkDB } from "../../PortDB";
 import { mainStyle } from "../../style/Globalstyle";
 
 const Section = styled.div`
@@ -235,7 +235,7 @@ export const SecondSection = () => {
         </SkTitleWrap>
         <SkillCon>
           <SkillWrap posi={skposi}>
-            {SkillDB.map((skill) => (
+            {FrontSkDB.map((skill) => (
               <Skill key={skill.id} className="skill">
                 <SkillImg src={`${skill.img}`} />
                 <SkillText>

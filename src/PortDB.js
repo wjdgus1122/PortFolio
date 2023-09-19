@@ -10,7 +10,7 @@ import react from "./img/skill/react.png";
 import todo from "./img/toy/Todolist.png";
 import game from "./img/toy/game.PNG";
 
-export const SkillDB = [
+export const FrontSkDB = [
   {
     id: 0,
     img: `${html}`,
@@ -31,10 +31,18 @@ export const SkillDB = [
     img: `${react}`,
     name: "React",
   },
+];
+
+export const BackSKDB = [
   {
-    id: 4,
+    id: 0,
     img: `${node}`,
     name: "NodeJS",
+  },
+  {
+    id: 1,
+    img: `${node}`,
+    name: "Java",
   },
 ];
 

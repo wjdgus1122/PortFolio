@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { FrontSkDB } from "../../PortDB";
+import { BackSKDB } from "../../PortDB";
 import { mainStyle } from "../../style/Globalstyle";
 
 const Section = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding: 0 50px;
   position: relative;
   box-sizing: border-box;
@@ -39,7 +40,7 @@ const SkTitle = styled.div`
 `;
 const SkillCon = styled.div`
   width: 100%;
-  height: 260px;
+  height: 300px;
   margin-top: 50px;
   position: relative;
   overflow: hidden;
@@ -51,7 +52,8 @@ const SkillCon = styled.div`
 const SkillWrap = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: ${(props) => props.posi};
   left: 0;
@@ -64,8 +66,17 @@ const SkillWrap = styled.div`
     position: relative;
   }
 `;
+const FrontSkill = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+`;
+const BackSkill = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 const Skill = styled.div`
-  width: 200px;
+  width: 100px;
   color: white;
   margin-right: 50px;
   @media screen and (max-width: 500px) {
@@ -76,7 +87,7 @@ const Skill = styled.div`
 `;
 const SkillImg = styled.img`
   width: 100%;
-  height: 200px;
+  height: 100px;
   @media screen and (max-width: 500px) {
     height: 70px;
   }
@@ -90,7 +101,7 @@ const SkillText = styled.div`
   align-items: center;
 `;
 const SkillTitle = styled.div`
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 900;
   @media screen and (max-width: 500px) {
     font-size: 20px;
@@ -174,9 +185,6 @@ const PjTitle = styled.div`
   @media screen and (max-width: 500px) {
     font-size: 40px;
   }
-  /* @media screen and (max-width: 400px) {
-    display: none;
-  } */
 `;
 
 export const SecondSection = () => {
@@ -235,14 +243,26 @@ export const SecondSection = () => {
         </SkTitleWrap>
         <SkillCon>
           <SkillWrap posi={skposi}>
-            {FrontSkDB.map((skill) => (
-              <Skill key={skill.id} className="skill">
-                <SkillImg src={`${skill.img}`} />
-                <SkillText>
-                  <SkillTitle>{skill.name}</SkillTitle>
-                </SkillText>
-              </Skill>
-            ))}
+            <FrontSkill>
+              {FrontSkDB.map((skill) => (
+                <Skill key={skill.id} className="skill">
+                  <SkillImg src={`${skill.img}`} />
+                  <SkillText>
+                    <SkillTitle>{skill.name}</SkillTitle>
+                  </SkillText>
+                </Skill>
+              ))}
+            </FrontSkill>
+            <BackSkill>
+              {BackSKDB.map((skill) => (
+                <Skill key={skill.id} className="skill">
+                  <SkillImg src={`${skill.img}`} />
+                  <SkillText>
+                    <SkillTitle>{skill.name}</SkillTitle>
+                  </SkillText>
+                </Skill>
+              ))}
+            </BackSkill>
           </SkillWrap>
         </SkillCon>
         <ExTextWrap>

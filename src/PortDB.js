@@ -6,6 +6,7 @@ import html from "./img/skill/html.png";
 import css from "./img/skill/css.png";
 import js from "./img/skill/js.png";
 import node from "./img/skill/node.png";
+import java from "./img/skill/java.png";
 import react from "./img/skill/react.png";
 import todo from "./img/toy/Todolist.png";
 import game from "./img/toy/game.PNG";
@@ -41,7 +42,7 @@ export const BackSKDB = [
   },
   {
     id: 1,
-    img: `${node}`,
+    img: `${java}`,
     name: "Java",
   },
 ];

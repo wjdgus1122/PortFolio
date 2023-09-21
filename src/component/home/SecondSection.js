@@ -40,7 +40,7 @@ const SkTitle = styled.div`
 `;
 const SkillCon = styled.div`
   width: 100%;
-  height: 300px;
+  height: 400px;
   margin-top: 50px;
   position: relative;
   overflow: hidden;
@@ -68,10 +68,22 @@ const SkillWrap = styled.div`
 `;
 const FrontSkill = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
 `;
 const BackSkill = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const SkillTitle = styled.h3`
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+`;
+const SkillConWrap = styled.div`
   display: flex;
   justify-content: center;
 `;
@@ -100,7 +112,7 @@ const SkillText = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-const SkillTitle = styled.div`
+const SkillName = styled.div`
   font-size: 25px;
   font-weight: 900;
   @media screen and (max-width: 500px) {
@@ -201,7 +213,7 @@ export const SecondSection = () => {
         setSkPosi("0");
       } else {
         setSkTitle("115px");
-        setSkPosi("260px");
+        setSkPosi("400px");
       }
       if (scl > 500) {
         setExText("0");
@@ -219,7 +231,7 @@ export const SecondSection = () => {
         setSkPosi("0");
       } else {
         setSkTitle("115px");
-        setSkPosi("260px");
+        setSkPosi("400px");
       }
       if (scl > 600) {
         setExText("0");
@@ -244,24 +256,30 @@ export const SecondSection = () => {
         <SkillCon>
           <SkillWrap posi={skposi}>
             <FrontSkill>
-              {FrontSkDB.map((skill) => (
-                <Skill key={skill.id} className="skill">
-                  <SkillImg src={`${skill.img}`} />
-                  <SkillText>
-                    <SkillTitle>{skill.name}</SkillTitle>
-                  </SkillText>
-                </Skill>
-              ))}
+              <SkillTitle>Front</SkillTitle>
+              <SkillConWrap>
+                {FrontSkDB.map((skill) => (
+                  <Skill key={skill.id} className="skill">
+                    <SkillImg src={`${skill.img}`} />
+                    <SkillText>
+                      <SkillName>{skill.name}</SkillName>
+                    </SkillText>
+                  </Skill>
+                ))}
+              </SkillConWrap>
             </FrontSkill>
             <BackSkill>
-              {BackSKDB.map((skill) => (
-                <Skill key={skill.id} className="skill">
-                  <SkillImg src={`${skill.img}`} />
-                  <SkillText>
-                    <SkillTitle>{skill.name}</SkillTitle>
-                  </SkillText>
-                </Skill>
-              ))}
+              <SkillTitle>Back</SkillTitle>
+              <SkillConWrap>
+                {BackSKDB.map((skill) => (
+                  <Skill key={skill.id} className="skill">
+                    <SkillImg src={`${skill.img}`} />
+                    <SkillText>
+                      <SkillName>{skill.name}</SkillName>
+                    </SkillText>
+                  </Skill>
+                ))}
+              </SkillConWrap>
             </BackSkill>
           </SkillWrap>
         </SkillCon>

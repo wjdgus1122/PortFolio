@@ -203,7 +203,8 @@ const TsText = styled.div`
 export const ToyProject = ({ bgcolor }) => {
   useEffect(() => {
     const ts = document.querySelector(".tstext");
-    const text1 = `Html Css JavaScript React ToyProject Login`.split(" ");
+    const text1 =
+      `Html Css JavaScript Java NodeJS React ToyProject Login`.split(" ");
     const textarr = (ele, arr) => {
       arr.push(...arr);
       for (let i = 0; i < arr.length; i++) {

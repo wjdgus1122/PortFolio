@@ -101,6 +101,16 @@ const TextWrap = styled.div`
     bottom: 260px;
   }
 `;
+const SkillWrap = styled.div`
+  width: 100%;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 20px;
+`;
+const Skill = styled.img`
+  width: 100%;
+`;
 const BtnWrap = styled.div`
   width: 100%;
   display: flex;
@@ -278,6 +288,11 @@ export const ToyProject = ({ bgcolor }) => {
                 <SlideTextWrap>
                   <TextWrap>
                     {con.name}
+                    <SkillWrap>
+                      {con.skill.map((skill) => (
+                        <Skill src={`${skill}`}></Skill>
+                      ))}
+                    </SkillWrap>
                     <BtnWrap>
                       <a target="_blank" href={`${con.pjpost}`}>
                         <PostBtn>
